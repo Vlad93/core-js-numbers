@@ -641,12 +641,10 @@ function getHypotenuse(a, b) {
  */
 function getCountOfOddNumbers(number) {
   let countOfOdd = 0;
-  let i = number;
-  while (i >= 0) {
-    if (i % 2 === 0) {
+  for (let i = Math.abs(number); i > 0; i -= 1) {
+    if (i % 2 !== 0) {
       countOfOdd += 1;
     }
-    i -= 1;
   }
   return countOfOdd;
 }
